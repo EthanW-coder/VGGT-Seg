@@ -21,8 +21,6 @@ conda create -n VGGTseg python=3.10
 conda activate VGGTseg
 
 #Python 3.10 and PyTorch 2.3 are required.
-
-```bash
 pip install torch==2.3.1 torchvision==0.18.1 --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 ```
