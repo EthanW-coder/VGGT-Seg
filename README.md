@@ -10,7 +10,7 @@
 VGGT-Seg is an end-to-end 3D instance segmentation framework that operates solely on sparse multi-view image sequences without requiring explicit sensor-provided geometric inputs.
 
 <center>
-  <img src="docs/Architecture.png" width="90%" alt="VGGT-Seg Architecture" />
+  <img src="docs/Architecture.png" width="95%" alt="VGGT-Seg Architecture" />
 </center>
 
 ## Installation
