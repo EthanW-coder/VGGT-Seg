@@ -1,0 +1,44 @@
+dataset: ai2thor
+model:
+  num_classes: 113
+  image_size: 518
+  patch_size: 14
+  hidden_dim: 256
+  num_heads: 8
+  decoder_layers: 6
+  semantic_queries: 200
+  learnable_queries: 100
+  afps_alpha: 1.0
+  mask_threshold: 0.5
+  topology_gamma: 0.15
+  icr_temperature: 0.1
+  icr_radius: 0.2
+  backbone_repo: facebook/VGGT-1B
+  backbone_checkpoint: null
+  feature_layers: [4, 11, 17, 23]
+data:
+  root: data/ai2thor
+  train_manifest: train.json
+  val_manifest: val.json
+  train_min_frames: 12
+  train_max_frames: 48
+  inference_max_frames: 80
+  num_workers: 4
+train:
+  epochs: 120
+  batch_size_per_gpu: 2
+  learning_rate: 0.0003
+  min_learning_rate: 0.0001
+  weight_decay: 0.05
+  gradient_clip_norm: 0.1
+  seed: 42
+  amp: true
+  output_dir: outputs
+  resume: null
+  lambda_cls: 0.5
+  lambda_mask: 1.0
+  lambda_icr: 0.5
+  lambda_bce: 1.0
+  lambda_dice: 1.0
+  no_object_weight: 0.1
+

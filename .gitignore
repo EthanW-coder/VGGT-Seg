@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+checkpoints/
+data/
+outputs/
+*.npz
+*.pt
+*.safetensors
+
+# VGGT demo assets (not needed by VGGT-Seg)
+vggt/examples/
+
+# Python packaging artifacts
+*.egg-info/
+build/
+dist/
+

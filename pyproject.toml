@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vggt-seg"
+version = "0.1.0"
+description = "Sparse multi-view 3D instance segmentation with a frozen VGGT encoder"
+requires-python = ">=3.10"
+dependencies = [
+    "einops>=0.7",
+    "huggingface-hub>=0.24",
+    "numpy<2",
+    "opencv-python>=4.8",
+    "Pillow>=10",
+    "plyfile>=1.0",
+    "PyYAML>=6",
+    "safetensors>=0.4",
+    "scipy>=1.11",
+    "torch>=2.3",
+    "torchvision>=0.18",
+    "tqdm>=4.66",
+]
+
+[tool.setuptools.packages.find]
+include = ["vggt_seg*"]
+
