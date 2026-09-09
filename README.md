@@ -7,7 +7,7 @@
 
 
 ## Introduction
-VGGT-Seg is an end-to-end 3D instance segmentation framework that operates solely on sparse multi-view image sequences without requiring explicit sensor-provided geometric inputs. This framework incorporates global semantic responses from visual foundation models via SPQI to alleviate the localization bias caused by sparse multi-view geometries, and introduces topology-rectified query rectification along with instance-centric rectified contrastive loss to address the supervision misalignment and geometric aliasing inherent in coarse point clouds.
+GGT-Seg is an end-to-end 3D instance segmentation framework that, at inference time, operates solely on sparse multi-view image sequences without requiring explicit sensor-provided geometric inputs. This framework incorporates global semantic responses from visual foundation models via SPQI to alleviate the localization bias caused by sparse multi-view geometries, and introduces topology-rectified query rectification along with instance-centric rectified contrastive loss to address the supervision misalignment and geometric aliasing inherent in coarse point clouds.
 
 <center>
   <img src="docs/Architecture.png" width="95%" alt="VGGT-Seg Architecture" />
@@ -47,8 +47,6 @@ data/<dataset>/
 Available configurations are `scannet`, `scannet200`, `ai2thor`, `matterport21`, and `matterport160`.
 
 ## Training
-
-The paper setting uses four GPUs and a batch size of two per GPU.
 
 ```bash
 bash scripts/train_vanilla.sh configs/scannet.yaml
