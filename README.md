@@ -34,17 +34,7 @@ huggingface-cli download facebook/VGGT-1B --local-dir checkpoints/VGGT-1B
 
 ## Data
 
-Preparation instructions are in [docs/data.md](docs/data.md). The resulting layout is:
-
-```text
-data/<dataset>/
-|- annotations/
-|- labels/
-|- train.json
-`- val.json
-```
-
-Available configurations are `scannet`, `scannet200`, `ai2thor`, `matterport21`, and `matterport160`.
+Preparation instructions are in [docs/data.md](docs/data.md). Available configurations are `scannet`, `scannet200`, `ai2thor`, `matterport21`, and `matterport160`.
 
 ## Training
 
@@ -62,7 +52,9 @@ bash scripts/infer_vanilla.sh configs/scannet.yaml CHECKPOINT IMAGE_DIR result.n
 bash scripts/infer_full.sh configs/scannet.yaml CHECKPOINT IMAGE_DIR result.npz
 ```
 
+## Acknowledgements
 
+We thank the authors and maintainers of [VGGT](https://github.com/facebookresearch/vggt) for releasing the code, models, and research foundations that make this project possible. 
 
 
 
