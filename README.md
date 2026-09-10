@@ -16,6 +16,10 @@ GGT-Seg is an end-to-end 3D instance segmentation framework that, at inference t
 ## Installation
 
 ```bash
+# Clone repository
+git clone https://github.com/EthanW-coder/VGGT-Seg.git
+cd VGGT-Seg
+
 # Create conda environment
 conda create -n VGGTseg python=3.10
 conda activate VGGTseg
